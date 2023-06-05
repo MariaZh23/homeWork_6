@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+    
+.grid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 1fr 600px ;
+  grid-template-rows: 100px 1fr 150px;
+  grid-template-areas:
+  "header header"
+  "main aside"
+  "footer footer";
+  font-size: 2em;
+  color: black;
+  text-align: center;
+}
+    
+header {
+  grid-area: header;
+  background-color: rgb(201, 200, 200);
+  padding: 15px;
+}
+
+aside {
+  grid-area: aside;
+  background-color: rgb(132, 255, 171);
+  padding: 15px;
+}
+
+main {
+  grid-area: main;
+  background-color: rgb(252, 216, 173);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 150px 150px;
+  padding: 15px;
+}
+    
+.item-0 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.item-1 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+    
+.item-2 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.item-3 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.item-1, .item-2, .item-3 {
+  background-color: rgb(252, 206, 146);
+  margin: 15px;
+  padding: 15px;
+}
+    
+footer {
+  grid-area: footer;
+  background-color: rgb(196, 187, 189);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 25px;
+  grid-auto-flow: column;
+  padding: 25px;
+  align-items: center;
+}
+    
+.footer-1, .footer-2, .footer-3, .footer-4 {
+  background-color: azure;
+  padding: 15px;
+}
